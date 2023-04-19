@@ -40,14 +40,7 @@ void Swiat::dodajLog(Organizm* zrodlo, string log)
 
 void Swiat::wyczyscLogi()
 {
-    for (int i = 0; i <= wpisyLogow; i++)
-    {
-		cout << "\033[" << wysokosc+4+i << ";0H";
-        for (int j = 0; j < 40; j++)
-        {
-			cout << " ";
-        }
-	}
+    cout << "\x1B[2J";
 	wpisyLogow = 0;
 }
 
@@ -204,7 +197,7 @@ void Swiat::wykonajTure()
 
 void Swiat::rysujSwiat()
 {
-    cout << "\x1B[2J\033[0;0H";
+    cout << "\033[0;0H";
     for (int i = 0; i < szerokosc * 2 + 2; i++)
     {
         cout << "#";

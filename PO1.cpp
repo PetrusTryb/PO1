@@ -13,6 +13,7 @@ enum klawisze { gora = 72, dol = 80, lewo = 75, prawo = 77, umiejetnosc = ' ', e
 int main()
 {
     srand(time(NULL));
+    SetConsoleTitle(L"Piotr Trybisz [193557]");
     SetConsoleOutputCP(CP_UTF8);
     CONSOLE_FONT_INFOEX cfi;
     cfi.cbSize = sizeof(cfi);
