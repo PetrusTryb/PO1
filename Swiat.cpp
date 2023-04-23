@@ -32,7 +32,7 @@ Organizm* Swiat::getOrganizm(pair<int,int> pozycja)
 void Swiat::dodajLog(Organizm* zrodlo, string log)
 {
     string nazwa = typeid(*zrodlo).name();
-    nazwa = "[" + nazwa.substr(6, nazwa.length())+"]";
+    nazwa = zrodlo->getIkona()+"(" + nazwa.substr(6, nazwa.length())+")";
     wpisyLogow++;
 	cout << "\033[" << wysokosc+4+wpisyLogow << ";0H";
     cout << nazwa << log;

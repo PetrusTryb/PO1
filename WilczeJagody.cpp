@@ -1,7 +1,7 @@
 ﻿#include "WilczeJagody.h"
 #include "Swiat.h"
 
-WilczeJagody::WilczeJagody(int x, int y) : Roslina(u8"🍒", 99, x, y)
+WilczeJagody::WilczeJagody(int x, int y) : Roslina(USE_EMOJI?u8"🍒":"WJ", 99, x, y)
 {
 }
 

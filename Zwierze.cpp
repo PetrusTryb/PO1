@@ -15,7 +15,7 @@ void Zwierze::akcja()
 {
 	postarz();
 	int move = rand() % 4;
-	while (!setPozycja({ getX()+moves[move][0], getY()+moves[move][1] }, false)) {
+	while (!setPozycja({ getX()+ruchy[move][0], getY()+ruchy[move][1] }, false)) {
 		move++;
 		move %= 4;
 	}
@@ -31,7 +31,7 @@ void Zwierze::kolizja(Organizm *inny)
 		swiat->dodajLog(this,u8"Rozmna¿anie");
 		auto dziecko = dynamic_cast<Zwierze*>(this->dziecko());
 		int move = rand() % 4;
-		while (!dziecko->setPozycja({ getX()+moves[move%4][0], getY()+moves[move%4][1] },true)) {
+		while (!dziecko->setPozycja({ getX()+ruchy[move%4][0], getY()+ruchy[move%4][1] },true)) {
 			move++;
 			if (move > 8) {
 				swiat->dodajLog(this, u8"Nie ma miejsca na rozmno¿enie");

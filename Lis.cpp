@@ -2,7 +2,7 @@
 #include "Zwierze.h"
 #include "Swiat.h"
 
-Lis::Lis(int x, int y) : Zwierze(u8"🦊", 3, 7, x, y)
+Lis::Lis(int x, int y) : Zwierze(USE_EMOJI?u8"🦊":"Li", 3, 7, x, y)
 {
 }
 
@@ -12,7 +12,7 @@ void Lis::akcja()
 	int move = rand()%4;
 	pair<int, int> nowaPozycja;
 	while (move <= 8) {
-		nowaPozycja = { getX() + moves[move%4][0], getY() + moves[move%4][1] };
+		nowaPozycja = { getX() + ruchy[move%4][0], getY() + ruchy[move%4][1] };
 		if (swiat->getOrganizm(nowaPozycja) == nullptr) {
 			if (setPozycja(nowaPozycja, false))
 				break;

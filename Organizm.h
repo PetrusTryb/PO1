@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
+#define USE_EMOJI 1
 using namespace std;
 class Swiat;
 class Organizm
@@ -13,7 +14,7 @@ class Organizm
 	pair<int,int> poprzedniaPozycja;
 protected:
 	Swiat* swiat;
-	const int moves[4][2] = { {0,1},{1,0},{0,-1},{-1,0} };
+	const int ruchy[4][2] = { {0,1},{1,0},{0,-1},{-1,0} };
 public:
 	Organizm(string ikona, int sila, int inicjatywa, int x, int y);
 	Organizm(const Organizm& a);
@@ -26,6 +27,7 @@ public:
 	int getSila();
 	int getInicjatywa();
 	int getWiek();
+	string getIkona();
 	void zabij();
 	void wzmocnij(int wartosc);
 	void postarz(int wartosc=1);

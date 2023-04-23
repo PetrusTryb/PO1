@@ -1,7 +1,7 @@
 ﻿#include "Zolw.h"
 #include "Swiat.h"
 
-Zolw::Zolw(int x, int y): Zwierze(u8"🐢", 2, 1, x, y)
+Zolw::Zolw(int x, int y): Zwierze(USE_EMOJI?u8"🐢":"Zo", 2, 1, x, y)
 {
 }
 

@@ -1,6 +1,6 @@
 ﻿#include "Mlecz.h"
 
-Mlecz::Mlecz(int x, int y): Roslina(u8"🌼", 0, x, y)
+Mlecz::Mlecz(int x, int y): Roslina(USE_EMOJI?u8"🌼":"Ml", 0, x, y)
 {
 }
 

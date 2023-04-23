@@ -1,6 +1,6 @@
 ﻿#include "Owca.h"
 
-Owca::Owca(int x, int y) : Zwierze(u8"🐑", 4, 4, x, y)
+Owca::Owca(int x, int y) : Zwierze(USE_EMOJI?u8"🐑":"Ow", 4, 4, x, y)
 {
 }
 

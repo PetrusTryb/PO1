@@ -1,7 +1,7 @@
 ﻿#include "Guarana.h"
 #include "Swiat.h"
 
-Guarana::Guarana(int x, int y) : Roslina(u8"🍀", 0, x, y)
+Guarana::Guarana(int x, int y) : Roslina(USE_EMOJI?u8"🍀":"Gu", 0, x, y)
 {
 }
 

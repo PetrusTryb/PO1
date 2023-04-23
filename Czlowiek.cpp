@@ -1,7 +1,7 @@
 ﻿#include "Czlowiek.h"
 #include "Swiat.h"
 
-Czlowiek::Czlowiek(int x, int y) : Zwierze(u8"🚹", 5, 4, x, y)
+Czlowiek::Czlowiek(int x, int y) : Zwierze(USE_EMOJI?u8"🚹":"Cz", 5, 4, x, y)
 {
 	umiejetnosc = -5;
 	kierunek = { 0,0 };

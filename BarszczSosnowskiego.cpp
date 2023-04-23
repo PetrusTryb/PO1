@@ -2,14 +2,14 @@
 #include "Swiat.h"
 #include "Zwierze.h"
 
-BarszczSosnowskiego::BarszczSosnowskiego(int x, int y) : Roslina(u8"🌵", 10, x, y)
+BarszczSosnowskiego::BarszczSosnowskiego(int x, int y) : Roslina(USE_EMOJI?u8"🌵":"BS", 10, x, y)
 {
 }
 
 void BarszczSosnowskiego::akcja()
 {
 	for (int i = 0; i < 4; i++) {
-		auto sasiad = swiat->getOrganizm({ getX() + moves[i][0], getY() + moves[i][1]});
+		auto sasiad = swiat->getOrganizm({ getX() + ruchy[i][0], getY() + ruchy[i][1]});
 		if (sasiad != nullptr) {
 			bool isZwierze = dynamic_cast<Zwierze*>(sasiad);
 			if (isZwierze) {

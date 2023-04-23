@@ -1,6 +1,6 @@
 ﻿#include "Wilk.h"
 
-Wilk::Wilk(int x, int y) : Zwierze(u8"🐶", 9, 5, x, y)
+Wilk::Wilk(int x, int y) : Zwierze(USE_EMOJI?u8"🐶":"Wi", 9, 5, x, y)
 {
 }
 

@@ -66,6 +66,11 @@ int Organizm::getWiek()
 	return wiek;
 }
 
+string Organizm::getIkona()
+{
+	return ikona;
+}
+
 void Organizm::postarz(int wartosc)
 {
 	wiek += wartosc;

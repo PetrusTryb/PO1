@@ -11,7 +11,7 @@ void Roslina::akcja()
 	if (zasieje) {
 		auto dziecko = dynamic_cast<Roslina*>(this->dziecko());
 		int move = rand() % 4;
-		while (!dziecko->setPozycja({ getX() + moves[move % 4][0], getY() + moves[move % 4][1] }, true)) {
+		while (!dziecko->setPozycja({ getX() + ruchy[move % 4][0], getY() + ruchy[move % 4][1] }, true)) {
 			move++;
 			if (move > 8) {
 				swiat->dodajLog(this, "Nie ma miejsca na rozsianie");

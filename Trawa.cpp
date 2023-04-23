@@ -1,6 +1,6 @@
 ﻿#include "Trawa.h"
 
-Trawa::Trawa(int x, int y): Roslina(u8"🌱", 0, x, y)
+Trawa::Trawa(int x, int y): Roslina(USE_EMOJI?u8"🌱":"Tr", 0, x, y)
 {
 }
 

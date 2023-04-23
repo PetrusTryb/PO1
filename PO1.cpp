@@ -79,7 +79,7 @@ int main()
                     getline(lista_plikow, linia);
                     cout << linia<<endl;
 				}
-                cout << u8"Podaj numer pliku do wczytania (0 aby anulować): ";
+                cout << u8"Podaj nr pliku do wczytania (0 = anuluj): ";
                 int numer;
                 cin >> numer;
                 plik = ifstream("save" + to_string(numer) + ".csv");
